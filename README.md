@@ -10,4 +10,7 @@
 
 <img width="905" alt="receive" src="https://github.com/Shreyac12/Food-Distribution-System-and-Data-Visualization/assets/115866623/57f4c63d-e8a6-4ce3-819c-0ab77a30d437">
 
+
+<img width="950" alt="receive2" src="https://github.com/Shreyac12/Food-Distribution-System-and-Data-Visualization/assets/115866623/a5e3391c-5b10-4d0c-8b18-87fe8c544cc9">
+
 # Dashboard
