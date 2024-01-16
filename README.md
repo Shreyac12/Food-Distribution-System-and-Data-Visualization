@@ -8,4 +8,6 @@
 
 # Receive
 
+<img width="905" alt="receive" src="https://github.com/Shreyac12/Food-Distribution-System-and-Data-Visualization/assets/115866623/57f4c63d-e8a6-4ce3-819c-0ab77a30d437">
+
 # Dashboard
