@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0; 
+            padding: 0; 
+        }
+        html { 
+            background: url('../static/fimage3.jpg') no-repeat center fixed; 
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.541);
+          }
+          h1{
+            color: white;
+            text-align: center;
+            margin-top: 140px;
+            font-size: 110px;
+            font-family: 'Dancing Script', cursive;
+          }
+         .btns{
+            
+            background-color: #ffffff0c;
+            border: 1px solid rgb(255, 255, 255);
+            box-shadow: 1px 1px 2px rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 327px;
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+          a{
+            text-decoration: none;
+            color: white;
+            font-size: 19px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+        .btn{
+            background-color: #ffffff07;
+            text-align: center;
+            border: 0px;
+            border-radius: 5px;
+            padding: 10px;
+            padding-left: 20px;
+            box-shadow: 1px 1px 2px rgb(255, 255, 255);
+            border: 1px solid rgb(255, 255, 255);
+            padding-right: 20px;
+            margin-left: 15px;
+        }
+        .circle{
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            margin-left: 60px;
+            margin-top: 18px;
+            width: 90%;
+            height: 530px;
+            background-color: rgba(255, 255, 255, 0.315);
+        }
+    </style>
+</head>
+<body>
+    <div class="circle">
+    <h1>Food for All</h1>
+
+    <!-- <img src="{{ url_for('static', filename='image3.jpg') }}" alt="Image"> -->
+   
+    <button class="btns"><a href="/donate">Donate</a></button>
+    <button class="btn"><a href="/receive">Receive</a></button>
+    <button class="btn"><a href="/dashboard">Dashboard</a></button>
+
+
+</div>
+</body>
+</html>

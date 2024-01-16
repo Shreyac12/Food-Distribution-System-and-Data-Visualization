@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body{
+            color: white;
+        }
+        html{
+            background-color: black;
+        }
+        .box {
+           
+            margin-bottom: 20px;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 600px 600px;
+            
+        }
+        .container{
+            margin-bottom: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+        #line{
+            margin-bottom: 40px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <div class="box">
+    <!-- Embed the donation bar chart -->
+    <div class="container">
+        <h2>Donation Bar Chart</h2>
+        <img src="data:image/png;base64,{{ chart_url_donate }}" alt="Donation Bar Chart">
+    </div>
+
+    <!-- Embed the received bar chart -->
+    <div class="container">
+        <h2>Received Bar Chart</h2>
+        <img src="data:image/png;base64,{{ chart_url_receive }}" alt="Received Bar Chart">
+    </div>
+
+    <!-- Embed the pie chart for donated food -->
+    <div class="container">
+        <h2>Donated Food Pie Chart</h2>
+        <img src="data:image/png;base64,{{ chart_url_pie }}" alt="Donated Food Pie Chart">
+    </div>
+
+    <!-- Embed the pie chart for received food -->
+    <div class="container">
+        <h2>Received Food Pie Chart</h2>
+        <img src="data:image/png;base64,{{ chart_url_receive_pie }}" alt="Received Food Pie Chart">
+    </div>
+
+
+    <!-- Embed the line chart for donation -->
+    <div class="container" id="line">
+        <h2>Total Quantity per Day - Donation</h2>
+        <img src="data:image/png;base64,{{ chart_url_line_donation }}" alt="Total Quantity per Day - Donation">
+    </div>
+
+
+    <!-- Embed the bar chart for received food -->
+    <div class="container">
+        <h2>Total Quantity per Day - Receiving (Bar Chart)</h2>
+        <img src="data:image/png;base64,{{ chart_url_bar_receive }}" alt="Total Quantity per Day - Receiving (Bar Chart)">
+    </div>
+
+    <!-- Embed the scatter plot for received food -->
+    <div class="container">
+        <h2>Total Quantity per Day (Scatter plot)</h2>
+        <img src="data:image/png;base64,{{ chart_url_scatter_receive }}" alt="Total Quantity per Day (Scatter plot)">
+    </div>
+    
+    <div class="container">
+        <h2>Total Quantity per Day (Scatter plot)</h2>
+        <img src="data:image/png;base64,{{ chart_url_scatter }}" alt="Total Quantity per Day (Scatter plot)">
+    </div>
+    
+    <div class="container">
+        <h2>Total Quantity per Day (Bubble plot)</h2>
+        <img src="data:image/png;base64,{{ chart_url_bubble }}" alt="Total Quantity per Day (Bubble plot)">
+    </div>
+
+    
+    <div class="container">
+        <h2>Total Quantity per Day (Doughnut Chart)</h2>
+        <img src="data:image/png;base64,{{ chart_url_doughnut_donation }}" alt="Total Quantity per Day (Doughnut chart)">
+    </div>
+
+    
+    <div class="container">
+        <h2>Total Quantity per Day (Radial Chart)</h2>
+        <img src="data:image/png;base64,{{ chart_url_radial_donation }}" alt="Total Quantity per Day (Radial chart)">
+    </div>
+    
+
+
+    <div class="container">
+        <h2>Total Quantity per Day (Grouped Bar Chart)</h2>
+        <img src="data:image/png;base64,{{ chart_url_grouped_column }}" alt="Total Quantity per Day (Grouped Bar chart)">
+    </div>
+    
+
+
+    <div class="container">
+        <h2>Total Quantity per Day ( Lollipop Chart)</h2>
+        <img src="data:image/png;base64,{{ chart_url_lollipop }}" alt="Total Quantity per Day (Lollipop chart)">
+    </div>
+    
+
+
+
+
+
+</div>
+<div class="container2">
+
+    <div class="c">
+        <h2>Quantity vs Day - Donation (Heatmap)</h2>
+        <img src="data:image/png;base64,{{ chart_url_heatmap_donate }}" alt="Quantity vs Day - Donation (Heatmap)">
+    </div>
+
+    <!-- Embed the heatmap for receiving -->
+    <div class="c">
+        <h2>Quantity vs Day - Receiving (Heatmap)</h2>
+        <img src="data:image/png;base64,{{ chart_url_heatmap_receive }}" alt="Quantity vs Day - Receiving (Heatmap)">
+    </div>
+</div>
+</body>
+</html>

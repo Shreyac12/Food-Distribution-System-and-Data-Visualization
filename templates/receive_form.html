@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+      body{
+        margin-top: 0px;
+      }
+        html { 
+            background: url('../static/recimage.jpeg') no-repeat center fixed; 
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.541);
+          }
+          .container{
+            background-color: white;
+            border: 5px solid wheat;
+          }
+          form{
+            
+            background-color: rgba(255, 255, 255, 0.377);
+            display: inline-block;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: 30px;
+            border-radius: 8px;
+          }
+          .inp{
+            margin-left: 30px;
+            margin-top: 10px;
+            width: 300px;
+            height: 35px;
+            background-color: rgba(240, 248, 255, 0.171);
+          }
+          .inpup{
+            margin-top: 30px;
+
+            width: 300px;
+            height: 30px;
+          }
+          input[type=text] {
+            border: none;
+            border-bottom: 1.5px solid rgb(183, 89, 89);
+          }
+         .lab{
+            margin: 15px;
+         }
+         .up{
+            margin: 15px;
+         }
+         .btn{
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 415px;
+            height: 40px;
+            background-color: #391212;
+            border: 1px solid #391212;
+            box-shadow: 1px 1px 5px #4e4e4e;
+            color: white;
+         }
+         #container{
+            border: 10px solid red;
+            background-color: white;
+            background: url('../static/image2.jpg') ;
+         }
+         a{
+          text-decoration: none;
+          color: white;
+          font-family: 'Dancing Script', cursive;
+          font-size: 33px;
+          margin-left: 20px;
+         }
+         #rbtn{
+          color: white;
+          font-family: 'Kalnia', serif;
+          font-size: 17px;
+          margin-left: 0px;
+
+         }
+         .box{
+          margin-left: 0px;
+          display: inline;
+    
+         }
+         #fname{
+          margin-left: 35px;
+         }
+         #fname1{
+          margin-left: 55px;
+         }
+         #quantity{
+          margin-left: 46px;
+         }
+         
+    </style>
+</head>
+<body>
+    <h2><a href="/">Food For All</a></h2>
+    <form action="/receive_success/{{id}}" method="GET">
+        <label for="fname1" class="lab">Food</label>
+        <div class="box"><input type="text" id="fname1" name="fname1" class="inp" value="{{food}}" readonly><br></div>
+        <label for="fname" class="lab">Address</label>
+        <div class="box"><input type="text" id="fname" name="fname" class="inp"><br></div>
+        <label for="quantity" class="lab">Phone</label>
+        <div class="box"><input type="text" id="quantity" name="quantity" class="inp"><br></div>
+        <button class="btn" id="rbtn">RECEIVE</button>
+    </form>
+<!-- </div> -->
+</body>
+</html>

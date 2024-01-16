@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receive</title>
+    <!-- <link rel="stylesheet" href=""> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
+    <style>
+        img{
+            height: 250px;
+            width: 383px;
+            margin: 0px;
+            border-radius: 10px 10px 0px 0px;
+        }
+        body{
+            background-color: rgb(245, 250, 255);
+        }
+        .container{
+            margin-top: 20px;
+            display: grid;
+            margin-left: 10px;
+            grid-template-columns: 400px 400px 400px;
+        }
+        .items{
+            background-color: rgb(255, 255, 255);
+            margin: 2px;
+            height: 320px;
+            width: 383px;
+            border: 5px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 2px 2px 7px grey;
+        }
+        .imgs {
+            width: 40px;
+            object-fit: contain;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(36, 7, 7);
+        }
+        .receivebtn{
+            background-color: #ffec1f5b;
+            border: 2px;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 10px;
+            float: right;
+            margin-left: 20px;
+            margin-right: 10px;
+            font-family: 'Kalnia', serif;
+        }
+        button :hover{
+            color: white;
+        }
+
+        .box{
+            margin-left: 10px;
+            display: inline;
+            font-family: 'Lato', sans-serif;
+            color: rgb(120, 120, 120);
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .quantity{
+            float: right;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: black;
+            font-size: 12px;
+            margin-top: 4px;
+            font-weight: bold;
+        }
+        h2{
+            margin-top: 6px;
+        }
+        #head{
+            margin-left: 28px;
+            text-decoration: none;
+            font-family: 'Dancing Script', cursive;
+            font-size: 33px;
+            display: inline;
+            position: fixed;
+           }
+        p{
+            margin-top: 0px;
+            margin-right: 10px;
+            margin-bottom: 0px;
+            font-weight: bold;
+        }
+        h3{
+            margin-top: 0px;
+            display: inline;
+            font-family: 'Kalnia', serif;
+            font-size: 14px;
+            color: black;
+        }
+        #phone{
+            color: rgb(120, 120, 120);
+        }
+        form{
+            margin-top: 1px;
+            display: inline;
+            margin-left: 900px;
+            position: fixed;
+        }
+        header{
+            height: 50px;  
+        }
+        .whole{
+            border-radius: 50px;
+            position: fixed;
+            height: 60px;
+            width: 100%;
+            background-color: #1056575b;
+        }
+        #search{
+            height: 25px;
+            width: 200px;
+            border: none;
+            border-radius: 40px;
+        }
+        .box1{
+            font-family: 'Lato', sans-serif;
+            color: rgb(120, 120, 120);
+            display: inline;
+            font-size: 12px;
+            margin: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="whole">
+    <h2><a href="/" id="head">Food For All</a></h2>
+    <form action="{{ url_for('receive') }}" method="GET">
+        
+        <input type="text" id="search" name="search" placeholder="   Enter food or location">
+        <button type="submit">Search</button>
+    </form>
+</div>
+</header>
+    <div class="container">
+        {% for row in query %}
+        
+        <div class="items">
+            <div class="imgs"><img src="{{ url_for('static', filename='uploads/' + row.image) }}" alt="Image"></div>
+            <div class="box">
+                 <h3 class="fname">{{row.fname}}</h3>
+                <p class="quantity">{{row.quantity}}kg</p>
+            </div><br>
+            <div class="box">
+                {{row.donar}}
+                <p class="quantity" id="phone">+91 {{row.phone}}</p>
+            </div><br>
+
+            <div class="box1">
+             {{row.location}}  </div> 
+            <button class="receivebtn"><a href="/receive_form/{{row.id}}">RECEIVE</a></button>
+        
+    </div>
+        
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+UPDATE receive SET shelf = '2', dates = '2023-12-01' WHERE id = 1;
+UPDATE receive SET shelf = '2', dates = '2023-12-01' WHERE id = 2;
+ UPDATE receive SET shelf = '3', dates = '2023-12-01' WHERE id = 3;
+UPDATE receive SET shelf = '1', dates = '2023-12-02' WHERE id = 4;
+UPDATE receive SET shelf = '1', dates = '2023-12-02' WHERE id = 5;
+UPDATE receive SET shelf = '2', dates = '2023-12-02' WHERE id = 6;
+UPDATE receive SET shelf = '3', dates = '2023-12-03' WHERE id = 7;
+UPDATE receive SET shelf = '1', dates = '2023-12-03' WHERE id = 8;
+UPDATE receive SET shelf = '1', dates = '2023-12-03' WHERE id = 9;
+UPDATE receive SET shelf = '2', dates = '2023-12-03' WHERE id = 10; -->
